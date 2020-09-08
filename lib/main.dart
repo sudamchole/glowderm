@@ -67,8 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("Demo"),
         ),
-        body: Container(
-          alignment: Alignment.centerLeft,
+        body: Center(
           child:companyModel == null
             ? showIndicator(e):ListView.builder(
               itemCount: _companyDetails.length,
@@ -95,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(fontWeight: FontWeight.w600,),
               ),
               Text(_companyDetails[index].ceo,  textAlign: TextAlign.start,
-              )
+              ),Divider()
             ],
           ),
         ],
